@@ -6,7 +6,7 @@ public class calcTEST {
 
     @Test
     void testadd(){
-        assertEquals(10,calc.add(7,2));
+        assertEquals(10,calc.add(7,3));
     }
     @Test
     void testsub(){
@@ -14,7 +14,7 @@ public class calcTEST {
     }
     @Test
     void testSubtractionNegativeThrowsException() {
-        assertThrows(IllegalStateException.class, () -> calculator.subtract(3, 5));
+        assertThrows(IllegalStateException.class, () -> calc.subtract(4, 2));
     }
     @Test
     void testmul(){
@@ -22,7 +22,7 @@ public class calcTEST {
     }
     @Test
     void testMultiplicationOverflowThrowsException() {
-        assertThrows(UnsupportedOperationException.class, () -> calculator.multiply(Integer.MAX_VALUE, 2));
+        assertThrows(UnsupportedOperationException.class, () -> calc.multiply(Integer.MAX_VALUE, 2));
     }
     @Test
     void testdiv(){
@@ -30,6 +30,6 @@ public class calcTEST {
     }
     @Test
     void testDivisionByZeroThrowsException() {
-        assertThrows(ArithmeticException.class, () -> calculator.divide(10, 0));
+        assertThrows(ArithmeticException.class, () -> calc.divide(10, 0));
     }
 }
