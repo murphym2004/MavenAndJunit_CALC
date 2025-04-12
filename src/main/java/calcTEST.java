@@ -10,11 +10,11 @@ public class calcTEST {
     }
     @Test
     void testsub(){
-        assertEquals(2,calc.subtract(2,4));
+        assertEquals(2,calc.subtract(4,2));
     }
     @Test
     void testSubtractionNegativeThrowsException() {
-        assertThrows(IllegalStateException.class, () -> calc.subtract(4, 2));
+        assertThrows(IllegalStateException.class, () -> calc.subtract(2, 4));
     }
     @Test
     void testmul(){
